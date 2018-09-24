@@ -6,7 +6,6 @@ apt-get -y install build-essential \
  libssl-dev libgetdns-dev \
  libyaml-dev libtool m4 autoconf
 
-cd
 git clone https://github.com/getdnsapi/getdns.git
 cd getdns
 git checkout develop
