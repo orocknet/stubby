@@ -1,3 +1,4 @@
+##
 ```
 apt-get update && \
 apt-get -y upgrade && \
@@ -6,6 +7,7 @@ apt-get -y install build-essential \
  libssl-dev libgetdns-dev \
  libyaml-dev libtool m4 autoconf
 ```
+##
 ```
 cd
 git clone https://github.com/getdnsapi/getdns.git
@@ -16,6 +18,7 @@ libtoolize -ci
 autoreconf -fi
 mkdir build && cd build
 ```
+##
 ```
 ../configure --prefix=/usr/local/ \
 --without-libidn \
@@ -27,6 +30,7 @@ mkdir build && cd build
 make
 make install
 ```
+##
 ```
 rm /usr/local/etc/stubby/stubby.yml
 wget -O /usr/local/etc/stubby/stubby.yml https://orocknet.github.io/stubby/stubby.yml
