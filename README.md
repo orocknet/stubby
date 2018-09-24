@@ -42,8 +42,6 @@ chown stubby:stubby /usr/local/bin/stubby
 systemctl daemon-reload
 systemctl enable stubby
 systemctl start stubby
-systemctl status stubby
-systemctl restart stubby
 
 netstat -tulpen -c
 ```
