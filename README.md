@@ -44,5 +44,5 @@ systemctl daemon-reload
 systemctl enable stubby
 systemctl start stubby
 
-netstat -tulpen -c
+netstat -tlpn -c
 ```
