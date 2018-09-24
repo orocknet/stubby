@@ -1,4 +1,3 @@
-##
 ```
 apt-get update && \
 apt-get -y upgrade && \
@@ -6,9 +5,7 @@ apt-get -y install build-essential \
  gcc git libunbound-dev net-tools \
  libssl-dev libgetdns-dev \
  libyaml-dev libtool m4 autoconf
-```
-##
-```
+
 cd
 git clone https://github.com/getdnsapi/getdns.git
 cd getdns
@@ -17,9 +14,7 @@ git submodule update --init
 libtoolize -ci
 autoreconf -fi
 mkdir build && cd build
-```
-##
-```
+
 ../configure --prefix=/usr/local/ \
 --without-libidn \
 --without-libidn2 \
@@ -29,9 +24,7 @@ mkdir build && cd build
 
 make
 make install
-```
-##
-```
+
 rm /usr/local/etc/stubby/stubby.yml
 wget -O /usr/local/etc/stubby/stubby.yml https://orocknet.github.io/stubby/stubby.yml
 wget -O /usr/local/etc/stubby/stubby.conf https://orocknet.github.io/stubby/stubby.conf
@@ -51,5 +44,6 @@ systemctl enable stubby
 systemctl start stubby
 systemctl status stubby
 systemctl restart stubby
-```
+
 netstat -tulpen -c
+```
