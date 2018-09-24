@@ -15,7 +15,8 @@ libtoolize -ci
 autoreconf -fi
 mkdir build && cd build
 
-../configure --prefix=/usr/local/ \
+../configure \
+--prefix=/usr/local/ \
 --without-libidn \
 --without-libidn2 \
 --enable-stub-only \
