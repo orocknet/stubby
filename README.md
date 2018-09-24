@@ -1,4 +1,3 @@
-install paket
 ```
 apt-get update && \
 apt-get -y upgrade && \
@@ -6,6 +5,7 @@ apt-get -y install build-essential \
  gcc git libunbound-dev net-tools \
  libssl-dev libgetdns-dev \
  libyaml-dev libtool m4 autoconf
+```
 ```
 cd
 git clone https://github.com/getdnsapi/getdns.git
@@ -15,6 +15,7 @@ git submodule update --init
 libtoolize -ci
 autoreconf -fi
 mkdir build && cd build
+```
 ```
 ../configure --prefix=/usr/local/ \
 --without-libidn \
