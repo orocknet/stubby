@@ -38,10 +38,9 @@ ldconfig
 d /usr/local/etc/stubby 0750 stubby stubby - -
 useradd -s /usr/sbin/nologin -r -M stubby
 
-chown stubby:stubby /usr/local/etc/stubby/stubby.conf
-chown stubby:stubby /usr/local/etc/stubby/stubby.yml
+chown -R stubby:stubby /usr/local/etc/stubby
+chown -R stubby:stubby /var/cache/stubby
 chown stubby:stubby /usr/local/bin/stubby
-chown stubby:stubby /var/cache/stubby
 
 systemctl daemon-reload
 systemctl enable stubby
