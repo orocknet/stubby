@@ -33,11 +33,10 @@ wget -O /lib/systemd/system/stubby.service https://orocknet.github.io/stubby/stu
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 ldconfig
-d /usr/local/etc/stubby 0750 stubby stubby - -
 useradd -s /usr/sbin/nologin -r -M stubby
 
 chown -R stubby:stubby /usr/local/etc/stubby
-chown -R stubby:stubby /var/cache/stubby
+mkdir /var/cache/stubby && chown -R stubby:stubby /var/cache/stubby
 chown stubby:stubby /usr/local/bin/stubby
 
 systemctl daemon-reload
