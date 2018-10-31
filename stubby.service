@@ -6,7 +6,7 @@ User=stubby
 DynamicUser=yes
 CacheDirectory=/var/cache/stubby
 WorkingDirectory=/usr/local/etc/stubby
-ExecStart=/usr/local/bin/stubby
+ExecStart=/usr/local/bin/stubby 0750 stubby stubby - -
 AmbientCapabilities=CAP_NET_BIND_SERVICE
 CapabilityBoundingSet=CAP_NET_BIND_SERVICE
 
