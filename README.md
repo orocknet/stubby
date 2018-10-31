@@ -26,7 +26,7 @@ mkdir build && cd build
 make
 make install
 
-rm /usr/local/etc/stubby/stubby.yml
+mv /usr/local/etc/stubby/stubby.yml /usr/local/etc/stubby/stubby.yml.orig
 wget -O /usr/local/etc/stubby/stubby.yml https://orocknet.github.io/stubby/stubby.yml
 wget -O /usr/local/etc/stubby/stubby.conf https://orocknet.github.io/stubby/stubby.conf
 wget -O /lib/systemd/system/stubby.service https://orocknet.github.io/stubby/stubby.service
