@@ -1,7 +1,11 @@
+################################################################################
+######################## STUBBY YAML CONFIG FILE ###############################
+################################################################################
 resolution_type: GETDNS_RESOLUTION_STUB
 dns_transport_list:
   - GETDNS_TRANSPORT_TLS
 tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
+dnssec_return_status: GETDNS_EXTENSION_FALSE
 tls_query_padding_blocksize: 128
 edns_client_subnet_private : 1
 round_robin_upstreams: 1
@@ -32,10 +36,10 @@ upstream_recursive_servers:
 ### Cleanbrowsing Security Filter 185.228.168.9 185.228.169.9
 ## Our security filter blocks access to phishing, malware and malicious domains.
 ## It does not block adult content.
-  - address_data: 185.228.168.9
-    tls_auth_name: "security-filter-dns.cleanbrowsing.org"
-  - address_data: 185.228.169.9
-    tls_auth_name: "security-filter-dns.cleanbrowsing.org"
+#  - address_data: 185.228.168.9
+#    tls_auth_name: "security-filter-dns.cleanbrowsing.org"
+#  - address_data: 185.228.169.9
+#    tls_auth_name: "security-filter-dns.cleanbrowsing.org"
 
 ### Cleanbrowsing Family Filter 185.228.168.168 185.228.169.168
 ## Blocks access to all adult, pornographic and explicit sites.
