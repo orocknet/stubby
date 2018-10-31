@@ -4,8 +4,8 @@ apt-get update && \
 apt-get -y upgrade && \
 apt-get -y install build-essential \
  gcc git libunbound-dev net-tools \
- libssl-dev libgetdns-dev \
- libyaml-dev libtool m4 autoconf
+ libssl-dev libgetdns-dev libyaml-dev \
+ libtool m4 autoconf automake
 
 git clone https://github.com/getdnsapi/getdns.git
 cd getdns
